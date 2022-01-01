@@ -4,7 +4,7 @@ import { IFileSaver } from "./file-saver";
 import { saveAs } from 'file-saver';
 
 export interface IFileCreator {
-    fileExtension: string;
+    extension: string;
     create(fileName: string, data: CsvFileModel[]): FileModel;
 }
 
@@ -14,6 +14,6 @@ export abstract class FileCreator implements IFileSaver, IFileCreator {
         saveAs(file.blob, file.fileName);
     }
 
-    abstract fileExtension: string;
+    abstract extension: string;
     abstract create(fileName: string, data: CsvFileModel[]): FileModel;
 }
