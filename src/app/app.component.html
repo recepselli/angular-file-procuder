@@ -7,6 +7,13 @@
       value="process" />
   </div>
 
+  <select class="form-select" aria-label="Default select example" #fileType>
+    <option value="xml">XML</option>
+    <option value="json">JSON</option>
+  </select>
+
+  <button type="button" class="btn btn-secondary" (click)="produceFile(fileType.value)">Produce File</button>
+
   <table class="table">
     <thead>
       <tr>
