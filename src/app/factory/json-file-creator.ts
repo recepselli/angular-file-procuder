@@ -6,7 +6,7 @@ export class JsonFileCreator extends FileCreator {
     extension: string = '.json'
     create(name: string, data: CsvFileModel[]): FileModel {
         const file: FileModel = {
-            name: name + this.extension,
+            name: `${name}${this.extension}`,
             blob: new Blob([JSON.stringify(data)], { type: 'application/json' })
         }
         return file;
