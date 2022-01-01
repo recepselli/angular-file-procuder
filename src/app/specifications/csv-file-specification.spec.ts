@@ -20,7 +20,7 @@ describe('CsvFileSpecification', () => {
         expect(service).toBeTruthy();
     });
 
-    it('should return true when model name is UTF-8, valid start and uri', () => {
+    it('should return true when model name is UTF-8, valid stars and uri', () => {
         const model: CsvFileModel = {
             name: 'The Gibson',
             address: 'address',
@@ -35,7 +35,7 @@ describe('CsvFileSpecification', () => {
         expect(result).toBe(true);
     });
 
-    it('should return false when name is Non UTF-8 characters but valid start and uri', () => {
+    it('should return false when name is Non UTF-8 characters but valid stars and uri', () => {
         const model: CsvFileModel = {
             name: '大阪',
             address: 'address',
@@ -50,7 +50,7 @@ describe('CsvFileSpecification', () => {
         expect(result).toBe(false);
     });
 
-    it('should return false when model name is UTF-8 and has valid uri, but has invalid start', () => {
+    it('should return false when model name is UTF-8 and has valid uri, but has invalid stars', () => {
         const model: CsvFileModel = {
             name: 'The Gibson',
             address: 'address',
@@ -65,7 +65,7 @@ describe('CsvFileSpecification', () => {
         expect(result).toBe(false);
     });
 
-    it('should return false when model name is UTF-8 and has valid start, but has invalid uri', () => {
+    it('should return false when model name is UTF-8 and has valid stars, but has invalid uri', () => {
         const model: CsvFileModel = {
             name: 'The Gibson',
             address: 'address',
