@@ -1,21 +1,16 @@
 import { CsvFileSpecification, HasValidStartRate, HasValidURL, IsNameUTF_8, } from './specifications/csv-file-specification';
 
 import { AppComponent } from './app.component';
+import { FileCreatorFactory } from './factory/file-creator-factory';
 import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed } from '@angular/core/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      providers: [
-        CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate
-      ],
-      declarations: [
-        AppComponent
-      ]
+      imports: [RouterTestingModule],
+      providers: [CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate, FileCreatorFactory],
+      declarations: [AppComponent]
     }).compileComponents();
   });
 

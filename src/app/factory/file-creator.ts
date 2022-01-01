@@ -1,0 +1,19 @@
+import { CsvFileModel } from "../models/csv-file-model";
+import { FileModel } from "./models/file-model";
+import { IFileSaver } from "./file-saver";
+import { saveAs } from 'file-saver';
+
+export interface IFileCreator {
+    fileExtension: string;
+    create(fileName: string, data: CsvFileModel[]): FileModel;
+}
+
+export abstract class FileCreator implements IFileSaver, IFileCreator {
+    saveFile(fileName: string, data: CsvFileModel[]) {
+        const file: FileModel = this.create(fileName, data);
+        saveAs(file.blob, file.fileName);
+    }
+
+    abstract fileExtension: string;
+    abstract create(fileName: string, data: CsvFileModel[]): FileModel;
+}

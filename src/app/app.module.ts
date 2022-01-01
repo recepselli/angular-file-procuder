@@ -3,6 +3,7 @@ import { CsvFileSpecification, HasValidStartRate, HasValidURL, IsNameUTF_8 } fro
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
+import { FileCreatorFactory } from './factory/file-creator-factory';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -15,7 +16,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate],
+  providers: [CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate, FileCreatorFactory],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
