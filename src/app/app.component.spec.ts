@@ -1,6 +1,8 @@
-import { TestBed } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { CsvFileSpecification, HasValidStartRate, HasValidURL, IsNameUTF_8, } from './specifications/csv-file-specification';
+
 import { AppComponent } from './app.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { TestBed } from '@angular/core/testing';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -8,9 +10,12 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule
       ],
+      providers: [
+        CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate
+      ],
       declarations: [
         AppComponent
-      ],
+      ]
     }).compileComponents();
   });
 
@@ -19,17 +24,3 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
-  it(`should have as title 'angular-file-procuder'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-file-procuder');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-file-procuder app is running!');
-  });
-});
