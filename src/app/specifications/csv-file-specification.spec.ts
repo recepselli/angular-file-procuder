@@ -13,7 +13,7 @@ describe('CsvFileSpecification', () => {
     });
 
     beforeEach(() => {
-        service = TestBed.get(CsvFileSpecification);
+        service = TestBed.inject(CsvFileSpecification);
     });
 
     it('should be created', () => {
@@ -91,7 +91,7 @@ describe('IsNameUTF_8', () => {
     });
 
     beforeEach(() => {
-        service = TestBed.get(IsNameUTF_8);
+        service = TestBed.inject(IsNameUTF_8);
     });
 
     it('should be created', () => {
@@ -154,7 +154,7 @@ describe('HasValidURL', () => {
     })
 
     beforeEach(() => {
-        service = TestBed.get(HasValidURL);
+        service = TestBed.inject(HasValidURL);
     })
 
     it('should be created', () => {
@@ -202,7 +202,7 @@ describe('HasValidStartRate', () => {
     })
 
     beforeEach(() => {
-        service = TestBed.get(HasValidStartRate);
+        service = TestBed.inject(HasValidStartRate);
     })
 
     it('should be created', () => {
