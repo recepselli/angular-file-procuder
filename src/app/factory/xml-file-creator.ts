@@ -3,10 +3,10 @@ import { FileCreator } from "./file-creator";
 import { FileModel } from "./models/file-model";
 
 export class XmlFileCreator extends FileCreator {
-    fileExtension: string = '.xml'
+    extension: string = '.xml'
     create(fileName: string, data: CsvFileModel[]): FileModel {
         const file: FileModel = {
-            fileName: fileName + this.fileExtension,
+            fileName: fileName + this.extension,
             blob: new Blob([this.getXmlString(fileName, data)], { type: 'application/xml' })
         }
         return file;
