@@ -44,6 +44,6 @@ export class AppComponent {
   }
 
   private createFile(fileType: string, fileName: string, csvFileModel: CsvFileModel[]) {
-    this.fileCreatorFactory.createInstance(fileType).saveFile(fileName, csvFileModel);
+    this.fileCreatorFactory.createInstance(fileType).save(fileName, csvFileModel);
   }
 }
