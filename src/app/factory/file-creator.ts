@@ -9,7 +9,7 @@ export interface IFileCreator {
 }
 
 export abstract class FileCreator implements IFileSaver, IFileCreator {
-    saveFile(fileName: string, data: CsvFileModel[]) {
+    save(fileName: string, data: CsvFileModel[]) {
         const file: FileModel = this.create(fileName, data);
         saveAs(file.blob, file.fileName);
     }
