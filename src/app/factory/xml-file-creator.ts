@@ -4,20 +4,20 @@ import { FileModel } from "./models/file-model";
 
 export class XmlFileCreator extends FileCreator {
     extension: string = '.xml'
-    create(fileName: string, data: CsvFileModel[]): FileModel {
+    create(name: string, data: CsvFileModel[]): FileModel {
         const file: FileModel = {
-            fileName: fileName + this.extension,
-            blob: new Blob([this.getXmlString(fileName, data)], { type: 'application/xml' })
+            name: name + this.extension,
+            blob: new Blob([this.getXmlString(name, data)], { type: 'application/xml' })
         }
         return file;
     }
 
-    private getXmlString(fileName: string, data: CsvFileModel[]): string {
-        var xml = `<?xml version="1.0" encoding="UTF-8"?><${fileName}>`;
+    private getXmlString(name: string, data: CsvFileModel[]): string {
+        var xml = `<?xml version="1.0" encoding="UTF-8"?><${name}>`;
         data.forEach(d => {
             Object.entries(d).forEach(([key, value]) => xml += `<${key}>${value}</${key}>`)
         })
-        xml += `</${fileName}>`;
+        xml += `</${name}>`;
         return xml;
     }
 }
