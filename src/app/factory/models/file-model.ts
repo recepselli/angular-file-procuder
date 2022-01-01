@@ -1,4 +1,4 @@
 export interface FileModel {
-    fileName: string;
+    name: string;
     blob: Blob;
 }

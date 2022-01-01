@@ -5,7 +5,7 @@ import { FileModel } from "./models/file-model";
 export class UnsupportedFileCreator extends FileCreator {
     extension: string = '';
 
-    create(fileName: string, data: CsvFileModel[]): FileModel {
+    create(name: string, data: CsvFileModel[]): FileModel {
         throw new Error("File type is being supported yet.");
     }
 }

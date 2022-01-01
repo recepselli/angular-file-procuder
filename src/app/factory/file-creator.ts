@@ -5,15 +5,15 @@ import { saveAs } from 'file-saver';
 
 export interface IFileCreator {
     extension: string;
-    create(fileName: string, data: CsvFileModel[]): FileModel;
+    create(name: string, data: CsvFileModel[]): FileModel;
 }
 
 export abstract class FileCreator implements IFileSaver, IFileCreator {
-    save(fileName: string, data: CsvFileModel[]) {
-        const file: FileModel = this.create(fileName, data);
-        saveAs(file.blob, file.fileName);
+    save(name: string, data: CsvFileModel[]) {
+        const file: FileModel = this.create(name, data);
+        saveAs(file.blob, file.name);
     }
 
     abstract extension: string;
-    abstract create(fileName: string, data: CsvFileModel[]): FileModel;
+    abstract create(name: string, data: CsvFileModel[]): FileModel;
 }
