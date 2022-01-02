@@ -161,7 +161,7 @@ describe('HasValidURL', () => {
         expect(service).toBeTruthy();
     })
 
-    it('should return true when uri has valid URL', () => {
+    it('should return true when uri is valid', () => {
         const model: CsvFileModel = {
             name: '',
             address: 'address',
@@ -176,7 +176,7 @@ describe('HasValidURL', () => {
         expect(result).toBe(true);
     });
 
-    it('should return false when uri has invalid URL', () => {
+    it('should return false when uri is invalid', () => {
         const model: CsvFileModel = {
             name: '',
             address: 'address',
@@ -209,7 +209,7 @@ describe('HasValidStartRate', () => {
         expect(service).toBeTruthy();
     })
 
-    it('should return true when stars has valid value', () => {
+    it('should return true when stars value valid', () => {
         const model: CsvFileModel = {
             name: '',
             address: 'address',
@@ -224,7 +224,7 @@ describe('HasValidStartRate', () => {
         expect(result).toBe(true);
     });
 
-    it('should return false when stars has value less than zero', () => {
+    it('should return false when stars value less than zero', () => {
         const model: CsvFileModel = {
             name: '',
             address: 'address',
@@ -239,7 +239,7 @@ describe('HasValidStartRate', () => {
         expect(result).toBe(false);
     });
 
-    it('should return false when stars has value bigger than five', () => {
+    it('should return false when stars value bigger than five', () => {
         const model: CsvFileModel = {
             name: '',
             address: 'address',
