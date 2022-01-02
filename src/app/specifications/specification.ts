@@ -18,7 +18,6 @@ export abstract class Specification<T> {
     }
 }
 
-
 class AndSpecification<T> extends Specification<T> {
     constructor(private left: Specification<T>, private right: Specification<T>) {
         super();
@@ -29,7 +28,6 @@ class AndSpecification<T> extends Specification<T> {
     }
 }
 
-
 class OrSpecification<T> extends Specification<T> {
     constructor(private left: Specification<T>, private right: Specification<T>) {
         super();
@@ -39,7 +37,6 @@ class OrSpecification<T> extends Specification<T> {
         return this.left.isSatisfiedBy(entity) || this.right.isSatisfiedBy(entity);
     }
 }
-
 
 class NotSpecification<T> extends Specification<T> {
     constructor(private specification: Specification<T>) {
