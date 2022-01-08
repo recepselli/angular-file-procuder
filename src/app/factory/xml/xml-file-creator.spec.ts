@@ -9,7 +9,7 @@ describe('XmlFileCreator', () => {
         TestBed.configureTestingModule({
             providers: [XmlFileCreator]
         });
-    })
+    });
 
     beforeEach(() => {
         service = TestBed.inject(XmlFileCreator);
