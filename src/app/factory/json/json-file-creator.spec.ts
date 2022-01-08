@@ -9,7 +9,7 @@ describe('JsonFileCreator', () => {
         TestBed.configureTestingModule({
             providers: [JsonFileCreator]
         });
-    })
+    });
 
     beforeEach(() => {
         service = TestBed.inject(JsonFileCreator);
