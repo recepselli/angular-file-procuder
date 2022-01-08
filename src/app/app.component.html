@@ -1,36 +1,36 @@
 <div class="container">
-  <h1 style="text-align: center">File Upload</h1>
-  <br /><br />
+    <h1 style="text-align: center">File Upload</h1>
+    <br /><br />
 
-  <div class="input-group mb-3">
-    <input type="file" class="form-control" id="customFile" #uploads (change)="onChange(uploads.files)"
-      value="process" />
-  </div>
+    <div class="input-group mb-3">
+        <input type="file" class="form-control" id="customFile" #uploads (change)="onChange(uploads.files)"
+            value="process" />
+    </div>
 
-  <select class="form-select" aria-label="Default select example" #fileType>
-    <option value="xml">XML</option>
-    <option value="json">JSON</option>
-  </select>
+    <select class="form-select" aria-label="Default select example" #fileType>
+        <option value="xml">XML</option>
+        <option value="json">JSON</option>
+    </select>
 
-  <button type="button" class="btn btn-secondary" (click)="produceFile(fileType.value)">Produce File</button>
+    <button type="button" class="btn btn-secondary" (click)="produceFile(fileType.value)">Produce File</button>
 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col" *ngFor="let item of headerColumns;">
-          {{item}}
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let record of dataList">
-        <td>{{ record.name }}</td>
-        <td>{{ record.address }}</td>
-        <td>{{ record.stars }}</td>
-        <td>{{ record.contact }}</td>
-        <td>{{ record.phone }}</td>
-        <td>{{ record.uri }}</td>
-      </tr>
-    </tbody>
-  </table>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col" *ngFor="let item of headerColumns;">
+                    {{item}}
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let record of dataList">
+                <td>{{ record.name }}</td>
+                <td>{{ record.address }}</td>
+                <td>{{ record.stars }}</td>
+                <td>{{ record.contact }}</td>
+                <td>{{ record.phone }}</td>
+                <td>{{ record.uri }}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
