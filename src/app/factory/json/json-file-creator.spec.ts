@@ -1,4 +1,4 @@
-import { CsvFileModel } from "../models/csv-file-model";
+import { CsvFileModel } from "../../models/csv-file-model";
 import { JsonFileCreator } from "./json-file-creator";
 import { TestBed } from "@angular/core/testing";
 
@@ -13,6 +13,10 @@ describe('JsonFileCreator', () => {
 
     beforeEach(() => {
         service = TestBed.inject(JsonFileCreator);
+    });
+
+    it('should be created', () => {
+        expect(service).toBeTruthy();
     });
 
     it('should return file model when create method called', () => {

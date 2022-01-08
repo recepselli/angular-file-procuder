@@ -1,4 +1,4 @@
-import { CsvFileModel } from "../models/csv-file-model";
+import { CsvFileModel } from "../../models/csv-file-model";
 import { TestBed } from "@angular/core/testing";
 import { XmlFileCreator } from "./xml-file-creator";
 
@@ -13,6 +13,10 @@ describe('XmlFileCreator', () => {
 
     beforeEach(() => {
         service = TestBed.inject(XmlFileCreator);
+    });
+
+    it('should be created', () => {
+        expect(service).toBeTruthy();
     });
 
     it('should return file model when create method called', () => {
