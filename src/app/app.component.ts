@@ -40,10 +40,6 @@ export class AppComponent {
             return;
         }
 
-        this.createFile(fileType, this.fileName, this.dataList);
-    }
-
-    private createFile(fileType: string, fileName: string, csvFileModel: CsvFileModel[]) {
-        this.fileCreatorFactory.createInstance(fileType).save(fileName, csvFileModel);
+        this.fileCreatorFactory.createInstance(fileType).save(this.fileName, this.dataList);
     }
 }

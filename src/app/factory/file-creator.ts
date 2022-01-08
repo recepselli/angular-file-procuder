@@ -10,6 +10,14 @@ export interface IFileCreator {
 
 export abstract class FileCreator implements IFileSaver, IFileCreator {
     save(name: string, data: CsvFileModel[]) {
+        if (!name) {
+            throw new Error('Name cannot be null.');
+        }
+
+        if (!data?.length) {
+            throw new Error('Data cannot be null.');
+        }
+
         const file: FileModel = this.create(name, data);
         saveAs(file.blob, file.name);
     }

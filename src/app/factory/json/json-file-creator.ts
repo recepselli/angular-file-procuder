@@ -5,7 +5,7 @@ import { FileModel } from "../models/file-model";
 export class JsonFileCreator extends FileCreator {
     extension: string = '.json'
     create(name: string, data: CsvFileModel[]): FileModel {
-        if (name === '' || data === undefined || data.length === 0) {
+        if (!name || !data?.length) {
             return {} as FileModel;
         }
 
