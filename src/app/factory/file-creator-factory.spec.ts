@@ -1,7 +1,7 @@
 import { FileCreatorFactory } from "./file-creator-factory";
 import { TestBed } from "@angular/core/testing";
-import { UnsupportedFileCreator } from "./unsupported/unsupported-file-creator";
-import { XmlFileCreator } from "./xml/xml-file-creator";
+import { UnsupportedFileCreator } from "./unsupported-file-creator/unsupported-file-creator";
+import { XmlFileCreator } from "./xml-file-creator/xml-file-creator";
 
 describe('FileCreatorFactory', () => {
     let service: FileCreatorFactory;
