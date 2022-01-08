@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 With this small project, you can upload a CSV file and convert it to either XML or JSON files.
 My aim was to show off how to use composite specification pattern to run some validation rules against the data in CSV file and also show off how to use factory method pattern to create a file with the selected type from selectbox from the UI.
 
-Specifications rules can be found under the specifications folder and factory method can be found under the factory folder. 
+Specifications rules can be found under the specifications folder and factory method can be found under the factory folder.
 
 ## Development server
 
