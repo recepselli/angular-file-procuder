@@ -6,17 +6,17 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { TestBed } from '@angular/core/testing';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      providers: [CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate, FileCreatorFactory],
-      declarations: [AppComponent]
-    }).compileComponents();
-  });
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [RouterTestingModule],
+            providers: [CsvFileSpecification, IsNameUTF_8, HasValidURL, HasValidStartRate, FileCreatorFactory],
+            declarations: [AppComponent]
+        }).compileComponents();
+    });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+    it('should create the app', () => {
+        const fixture = TestBed.createComponent(AppComponent);
+        const app = fixture.componentInstance;
+        expect(app).toBeTruthy();
+    });
 });
