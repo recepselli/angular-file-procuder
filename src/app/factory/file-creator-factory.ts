@@ -1,7 +1,7 @@
 import { IFileSaver } from "./file-saver";
-import { JsonFileCreator } from "./json-file-creator";
-import { UnsupportedFileCreator } from "./unsupported-file-creator";
-import { XmlFileCreator } from "./xml-file-creator";
+import { JsonFileCreator } from "./json/json-file-creator";
+import { UnsupportedFileCreator } from "./unsupported/unsupported-file-creator";
+import { XmlFileCreator } from "./xml/xml-file-creator";
 
 export class FileCreatorFactory {
     private _fileTypes: Map<string, IFileSaver> = new Map<string, IFileSaver>();
